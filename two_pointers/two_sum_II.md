@@ -72,6 +72,4 @@ This eliminates unnecessary comparisons and reduces time complexity.
 
 ---
 
-## 💡 One-Line Summary
 
-U
