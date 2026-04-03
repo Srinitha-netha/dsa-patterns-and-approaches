@@ -2,6 +2,12 @@
 
 ---
 
+## 🔗 Problem Link
+
+* LeetCode: https://leetcode.com/problems/3sum/
+
+---
+
 ## 📌 Problem
 
 Given an integer array `nums`, return all **unique triplets** such that:
