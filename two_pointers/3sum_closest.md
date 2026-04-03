@@ -2,6 +2,12 @@
 
 ---
 
+## 🔗 Problem Link
+
+* LeetCode: https://leetcode.com/problems/3sum-closest/
+
+---
+
 ## 📌 Problem
 
 Given an array `nums` and an integer `target`, find the **sum of three integers** such that the sum is **closest to target**.
