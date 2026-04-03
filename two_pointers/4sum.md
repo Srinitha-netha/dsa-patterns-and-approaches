@@ -2,6 +2,12 @@
 
 ---
 
+## 🔗 Problem Link
+
+* LeetCode: https://leetcode.com/problems/4sum/
+
+---
+
 ## 📌 Problem
 
 Given an array `nums` and an integer `target`, return all **unique quadruplets**:
@@ -32,7 +38,7 @@ nums[i] + nums[j] + nums[left] + nums[right] = target
 
 ### 🔹 Step 1: Sort the Array
 
-```python
+```python id="7d6a8q"
 nums.sort()
 ```
 
@@ -40,13 +46,13 @@ nums.sort()
 
 ### 🔹 Step 2: First Loop (`i`)
 
-```python
+```python id="0k8m6s"
 for i in range(len(nums)):
 ```
 
 #### Skip duplicates:
 
-```python
+```python id="w5x3jq"
 if i > 0 and nums[i] == nums[i - 1]:
     continue
 ```
@@ -55,13 +61,13 @@ if i > 0 and nums[i] == nums[i - 1]:
 
 ### 🔹 Step 3: Second Loop (`j`)
 
-```python
+```python id="j7m2xk"
 for j in range(i + 1, len(nums)):
 ```
 
 #### Skip duplicates:
 
-```python
+```python id="g3l9pz"
 if j > i + 1 and nums[j] == nums[j - 1]:
     continue
 ```
@@ -70,7 +76,7 @@ if j > i + 1 and nums[j] == nums[j - 1]:
 
 ### 🔹 Step 4: Two Pointer Setup
 
-```python
+```python id="k9v2nb"
 left = j + 1
 right = len(nums) - 1
 ```
@@ -79,7 +85,7 @@ right = len(nums) - 1
 
 ### 🔹 Step 5: Find Quadruplets
 
-```python
+```python id="z1p4mc"
 while left < right:
     total = nums[i] + nums[j] + nums[left] + nums[right]
 ```
@@ -95,13 +101,13 @@ while left < right:
 
 #### ⬆️ If `total < target`
 
-```python
+```python id="m2q8ws"
 left += 1
 ```
 
 #### ⬇️ If `total > target`
 
-```python
+```python id="r8k3xy"
 right -= 1
 ```
 
@@ -109,7 +115,7 @@ right -= 1
 
 ### 🔹 Step 7: Skip Duplicates (Critical ⚠️)
 
-```python
+```python id="n6f1ab"
 # Skip duplicates for left
 while left < right and nums[left] == nums[left - 1]:
     left += 1
@@ -123,7 +129,7 @@ while left < right and nums[right] == nums[right + 1]:
 
 ## 🧠 Dry Run (ASCII)
 
-```text
+```text id="4sumdry"
 nums = [1, 0, -1, 0, -2, 2], target = 0
 
 Sorted:
@@ -168,7 +174,7 @@ Move left → continue searching
 
 ## ⚠️ Edge Cases
 
-```text
+```text id="4sumedge"
 - nums length < 4 → return []
 - Large numbers → watch for overflow (in some languages)
 ```
